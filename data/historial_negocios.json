@@ -1,18 +1,1 @@
-[
-    {
-        "nombre": "taller",
-        "fecha": "2025-07-28 13:22",
-        "emoji": "🔧",
-        "costo_inicial": 22000,
-        "gasto_mensual": 4000,
-        "ganancia_media": 7500
-    },
-    {
-        "nombre": "cafetería",
-        "fecha": "2025-07-28 13:29",
-        "emoji": "☕",
-        "costo_inicial": 15000,
-        "gasto_mensual": 3000,
-        "ganancia_media": 5500
-    }
-]
+[]
