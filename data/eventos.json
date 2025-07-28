@@ -1,0 +1,18 @@
+[
+  {
+    "Mes": "Jul-2025",
+    "Sucursal": "Mérida",
+    "Evento": "Reunión inesperada",
+    "ImpactoEficiencia": 0.05,
+    "ImpactoClima": -0.02,
+    "Empleado": "Sofía"
+  },
+  {
+    "Mes": "Jul-2025",
+    "Sucursal": "Mérida",
+    "Evento": "Lunch robado",
+    "ImpactoEficiencia": -0.03,
+    "ImpactoClima": -0.07,
+    "Empleado": "Luis"
+  }
+]

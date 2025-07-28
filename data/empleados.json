@@ -1,0 +1,16 @@
+[
+  {
+    "Mes": "Jul-2025",
+    "Nombre": "Carlos",
+    "Rol": "Vendedor",
+    "Sueldo": 8000,
+    "Eficiencia": 0.78
+  },
+  {
+    "Mes": "Jul-2025",
+    "Nombre": "Sofía",
+    "Rol": "Contadora",
+    "Sueldo": 10000,
+    "Eficiencia": 0.92
+  }
+]

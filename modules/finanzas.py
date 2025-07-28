@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import json
 import random
 import pyttsx3
 from datetime import datetime
@@ -10,16 +11,23 @@ def calcular_impuestos(utilidad, tasa_isr=30.0, tasa_iva=16.0):
     return isr, iva
 
 def guardar_historial(mes, utilidad):
+    nuevo = {"Mes": mes, "Utilidad": utilidad}
     try:
-        df = pd.read_csv("data/historial.csv")
-    except FileNotFoundError:
-        df = pd.DataFrame(columns=["Mes", "Utilidad"])
-    df = pd.concat([df, pd.DataFrame([{"Mes": mes, "Utilidad": utilidad}])], ignore_index=True)
-    df.to_csv("data/historial.csv", index=False)
+        with open("data/historial.json", "r", encoding="utf-8") as f:
+            historial = json.load(f)
+    except:
+        historial = []
+
+    historial.append(nuevo)
+
+    with open("data/historial.json", "w", encoding="utf-8") as f:
+        json.dump(historial, f, indent=4, ensure_ascii=False)
 
 def mostrar_historial():
     try:
-        df = pd.read_csv("data/historial.csv")
+        with open("data/historial.json", "r", encoding="utf-8") as f:
+            historial = json.load(f)
+        df = pd.DataFrame(historial)
         st.subheader("📈 Historial de Utilidades")
         st.line_chart(df.set_index("Mes"))
         return df
@@ -34,8 +42,8 @@ def generar_resumen_voz(texto):
 
 def mostrar():
     st.title("💰 Finanzas Capitalismo Tropical")
-
     st.header("🏢 Rendimiento por Sucursal")
+
     sucursales = st.multiselect("Selecciona sucursales operativas", ["Mérida", "CDMX", "París", "Tokio"])
     rendimiento = {}
     utilidad_total = 0
@@ -71,7 +79,6 @@ def mostrar():
         generar_resumen_voz(resumen)
         st.success("Resumen vocal activado")
 
-    # Guardar utilidad final
     if st.button("📌 Guardar utilidad del mes"):
         mes_actual = datetime.now().strftime("%b-%Y")
         guardar_historial(mes_actual, utilidad_final)

@@ -1,16 +1,13 @@
 import streamlit as st
 import pandas as pd
-import json
 
 def mostrar():
     st.title("📋 Reportes de Recursos Humanos")
     st.subheader("Analiza el rendimiento histórico de tus empleados tropicales")
 
     try:
-        with open("data/empleados.json", "r", encoding="utf-8") as f:
-            data = json.load(f)
-        df = pd.DataFrame(data)
-    except Exception:
+        df = pd.read_csv("data/empleados.csv")
+    except FileNotFoundError:
         st.warning("No se encontró historial de empleados.")
         return
 

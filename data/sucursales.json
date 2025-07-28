@@ -1,0 +1,5 @@
+[
+  { "Sucursal": "Mérida", "Mes": "2025-07", "Eficiencia": 0.82, "Clima": 0.88 },
+  { "Sucursal": "Cancún", "Mes": "2025-07", "Eficiencia": 0.76, "Clima": 0.79 },
+  { "Sucursal": "Tulum", "Mes": "2025-07", "Eficiencia": 0.68, "Clima": 0.58 }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "nombre": "cafetería",
+    "emoji": "☕",
+    "costo_inicial": 15000,
+    "gasto_mensual": 3000,
+    "ganancia_media": 5500
+  },
+  {
+    "nombre": "taller",
+    "emoji": "🔧",
+    "costo_inicial": 22000,
+    "gasto_mensual": 4000,
+    "ganancia_media": 7500
+  },
+  {
+    "nombre": "tienda",
+    "emoji": "🛍️",
+    "costo_inicial": 18000,
+    "gasto_mensual": 3500,
+    "ganancia_media": 6200
+  },
+  {
+    "nombre": "estudio creativo",
+    "emoji": "🎨",
+    "costo_inicial": 20000,
+    "gasto_mensual": 4200,
+    "ganancia_media": 6800
+  },
+  {
+    "nombre": "food truck",
+    "emoji": "🚚",
+    "costo_inicial": 25000,
+    "gasto_mensual": 5000,
+    "ganancia_media": 8200
+  },
+  {
+    "nombre": "lavandería",
+    "emoji": "🧼",
+    "costo_inicial": 16000,
+    "gasto_mensual": 2800,
+    "ganancia_media": 4900
+  }
+]
